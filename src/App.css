@@ -1,8 +1,9 @@
+
 button {
   background-color: inherit;
   border: none;
   cursor: pointer;
-  text-decoration: underline;
+  text-decoration:none;
 }
 
 button:hover,
@@ -26,7 +27,8 @@ form {
 
 input {
   border: none;
-  border-bottom: 1px solid black;
+  border: 1px solid black;
+  border-radius: 0.5rem;
 }
 
 main {
@@ -39,7 +41,7 @@ main {
 header {
   display: flex;
   justify-content: flex-end;
-  padding: 0 50px;
+  padding: 0 10px;
 }
 
 .todo {
@@ -61,3 +63,4 @@ header {
 }
 
 .firebase-emulator-warning { display: none; }
+

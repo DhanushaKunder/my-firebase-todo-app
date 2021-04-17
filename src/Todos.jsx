@@ -30,6 +30,7 @@ const Todos = () => {
       <header>
         <button onClick={signOut}>Sign Out</button>
       </header>
+      <h1 className="heading_one"> Dhanusha's TO-DO App</h1>
       <main>
         <form onSubmit={onSubmitTodo}>
           <input
@@ -38,7 +39,7 @@ const Todos = () => {
             onChange={(e) => setTodo(e.target.value)}
             placeholder="What's Next?"
           />
-          <button type="submit">Add</button>
+          <button className="submit_button" type="submit">Add</button>
         </form>
         {todos && todos.map((todo) => <Todo key={todo.id} {...todo} />)}
       </main>
