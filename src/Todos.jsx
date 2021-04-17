@@ -1,6 +1,6 @@
 import "./App.css";
 import { useState } from "react";
-import firebase, { auth, firestore, functions } from "./firebase";
+import firebase, { auth, firestore} from "./firebase";
 import { useCollectionData } from "react-firebase-hooks/firestore";
 
 
