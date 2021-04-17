@@ -7,7 +7,6 @@ import firebase from "firebase";
 
 const sighInWithGoogle = () =>
     auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
-  //auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
 
 const SignIn = () => (
   <main>
