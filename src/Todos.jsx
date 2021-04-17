@@ -7,7 +7,8 @@ const addTodo = functions.httpsCallable("addTodo");
 
 const Todos = () => {
   const [todo, setTodo] = useState("");
-  const todosRef = firestore.collection(`users/${auth.currentUser.uid}/todos`);
+  const todosRef = firestore.collection( `users/${auth.currentUser.uid}/todos`);
+  // const todosRef = firestore.collection(`/todos`);
   const [todos] = useCollectionData(todosRef, { idField: "id" });
 
   const signOut = () => auth.signOut();
@@ -16,7 +17,8 @@ const Todos = () => {
     event.preventDefault();
 
     setTodo("");
-    addTodo({
+    // addTodo({
+     todosRef.add({ 
       text: todo,
       complete: false,
       createdAt: firebase.firestore.FieldValue.serverTimestamp(),
@@ -46,6 +48,7 @@ const Todos = () => {
 
 const Todo = ({ id, complete, text }) => {
   const todosRef = firestore.collection(`users/${auth.currentUser.uid}/todos`);
+  // const todosRef = firestore.collection(`/todos`);
   const onCompleteTodo = (id, complete) =>
     todosRef.doc(id).set({ complete: !complete }, { merge: true });
 

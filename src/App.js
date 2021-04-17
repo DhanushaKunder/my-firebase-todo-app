@@ -16,7 +16,6 @@ const SignIn = () => (
 
 
 const App = () => {
-  //const user=""
   const [user] = useAuthState(auth);
 
   return user ? <Todos />
